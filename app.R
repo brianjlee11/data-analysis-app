@@ -1,0 +1,20 @@
+library(shiny)
+library(dplyr)
+library(ggplot2)
+library(wbstats)
+library(tidyr)
+library(DT)
+library(stringr)
+library(maps)
+library(mapproj)
+library(scales)
+library(shinythemes)
+
+source("load_data.R")
+source("press_freedom_data_extract.R")
+source("process_rise_fall_data.R")
+source("my_ui.R")
+source("my_server.R")
+
+
+shinyApp(ui = shinyUI(my_ui), server = shinyServer(my_server))
